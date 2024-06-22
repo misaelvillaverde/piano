@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+ body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #2E3440;
+    flex-direction: column;
+    overflow: hidden;
+}
+div#piano {
+    display: flex;
+}
+div.key {
+    position: relative;
+    width: 60px;
+    height: 210px;
+    background: #D8DEE9;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+div.black-key {
+    position: absolute;
+    top: -1px;
+    left: 37.5px;
+    width: 45px;
+    height: 120px;
+    background: #434C5E;
+    border-radius: 5px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.buttons {
+    margin-top: 20px;
+    padding: 10px;
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    cursor: pointer;
+    border-style: none;
+    border-color: none;
+    font-size: 20px;
+    background-color: #BF616A;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.shiftL {
+    opacity: 0;
+    transform: translateY(15px) rotate(-2deg);
+    transition: all 0.2s;
+}
+
+.shiftR {
+    opacity: 0;
+    transform: translateY(15px) rotate(2deg);
+    transition: all 0.2s;
+}
+
+.pressed {
+    transform: translateY(2px);
+    transition: 0.1s;
+}
